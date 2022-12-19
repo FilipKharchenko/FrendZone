@@ -1,0 +1,1004 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-extrabold-webfont.woff2') format('woff2'),
+            url('../fonts/montserrat-extrabold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+  
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+* {
+box-sizing: border-box;
+}
+  
+html {
+    line-height: 1.15;
+    overflow: hidden;
+    overflow-y: overlay;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #0053DD;
+    overflow-x: hidden;
+}
+
+main {
+    display: block;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    max-width: 1226px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+/*header*/
+
+.header__container {
+    position: relative;
+    text-align: center;
+    padding-top: 56px;
+}
+
+.header__logo {
+    display: inline-block;
+    max-width: 716px;
+    margin-left: 12px;
+    max-height: 132px;
+    margin-bottom: 22px;
+}
+
+.header__list {
+    display: flex;
+    justify-content: center;
+    margin-left: 13px;
+}
+
+.header__item:not(:last-child) {
+    margin-right: 48px;
+}
+
+.header__item {
+    z-index: 2;
+}
+
+.header__item-link svg {
+    fill: #000;
+    transition: fill .2s ease-in-out;
+}
+
+.header__item-link:hover svg {
+    fill: #fff;
+}
+
+/*hero*/
+.hero {
+    position: relative;
+}
+
+.ball {
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    transition: all 1.8s ease-in-out;
+    z-index: 5;
+}
+
+.ball__first {
+    background-image: url('../img/ball-first.png');
+    transform: rotate(6.6deg);
+    top: 18vw;
+    bottom: -200px;
+    right: 67.5%;
+    left: -9.7%;
+}
+
+.ball__first.active {
+    top: 11vw;
+    left: -11%;
+    right: 68%;
+    transform: rotate(-28deg) scale(.75);
+}
+
+.ball__second {
+    background-image: url('../img/ball-second.png');
+    top: 22vw;
+    left: 65%;
+    bottom: -180px;
+    right: -1.3%;
+    transform: rotate(-9.17deg);
+}
+
+.ball__second.active {
+    top: 8vw;
+    right: -13%;
+    transform: rotate(16deg) scale(.6);
+}
+
+.ball__third {
+    background-image: url('../img/ball-third.png');
+    top: 4vw;
+    left: 0%;
+    bottom: 0;
+    right: 55%;
+    transform: rotate(-19.04deg);
+}
+
+.ball__third.active {
+    top: -22vw;
+    left: -14%;
+    right: 68%;
+    transform: rotate(-19deg) scale(.64);
+}
+
+.ball__fourth {
+    background-image: url('../img/ball-fourth.png');
+    top: -15vw;
+    left: 19%;
+    bottom: 0px;
+    right: 51%;
+    transform: rotate(-14deg);
+}
+
+.ball__fourth.active {
+    left: 3%;
+    right: 66%;
+    top: -42.5vw;
+    transform: rotate(-5deg) scale(.81);
+}
+
+.ball__fifth {
+    background-image: url('../img/ball-fifth.png');
+    top: 8vw;
+    right: 7%;
+    left: 57%;
+    bottom: 0;
+    transform: rotate(11.92deg);
+}
+
+.ball__fifth.active {
+    top: -17vw;
+    right: -14%;
+    left: 78%;
+    transform: rotate(12deg) scale(.83);
+}
+
+
+.ball__sixth {
+    background-image: url('../img/ball-sixth.png');
+    top: 0vw;
+    left: 43%;
+    right: 25%;
+    bottom: 0;
+    transform: rotate(6.6deg);
+}
+
+.ball__sixth.active {
+    top: -44vw;
+    left: 72.5%;
+    right: -5.5%;
+    transform: rotate(-15deg) scale(.7);
+}
+
+.ball__seventh {
+    background-image: url('../img/ball-seventh.png');
+    top: -24.5vw;
+    right: -1%;
+    bottom: 0;
+    left: 63%;
+    transform: rotate(6.17deg);
+}
+
+.ball__seventh.active {
+    top: -64vw;
+    right: -11.8%;
+    left: 72.5%;
+    transform: rotate(7deg) scale(.59);
+}
+
+.ball__eighth {
+    background-image: url('../img/ball-eighth.png');
+    top: -34.8vw;
+    left: 0.5%;
+    bottom: 0;
+    right: 63%;
+    transform: rotate(-9.17deg);
+}
+
+.ball__eighth.active {
+    top: -59vw;
+    left: -7%;
+    right: 68%;
+    transform: rotate(-10deg) scale(.68);
+}
+
+.ball__ninth {
+    display: none;
+}
+
+.hero__container {
+    padding-top: 0;
+    margin-top: -12px;
+}
+
+.hero__img {
+    max-width: 1176px;
+    margin-left: 8px;
+}
+
+/*tickets*/
+
+.tickets {
+    padding-top: 14px;
+}
+
+.tickets__container {
+    position: relative;
+    text-align: center;
+}
+
+.tickets__title {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: 2.3px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 4px;
+    font-weight: 700;
+}
+
+.tickets__title span {
+    display: inline-block;
+}
+
+.tickets__title span:nth-child(3n+2){
+    transform: translateY(5px);
+}
+
+.tickets__title span:nth-child(4n) {
+    transform: translateY(-3px);
+}
+
+.tickets__title span:nth-child(11) {
+    transform: translateY(-5px);
+}
+
+
+.tickets__arrow {
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 87px;
+}
+
+.arrow__bottom {
+    margin-top: -8px;
+}
+
+.tickets__list {
+    margin: 0 auto;
+    max-width: 815px;
+    margin-bottom: 115px;
+    padding-left: 20px;
+    padding-right: 7px;
+}
+
+.tickets__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tickets__item:not(:last-child) {
+    margin-bottom: 38px;
+}
+
+.tickets__item-left {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+}
+
+.tickets__item-data {
+    max-width: 120px;
+    width: 100%;
+    text-align: left;
+    color: #000;
+    font-size: 36px;
+    font-weight: 700;
+    margin-right: 3vw;
+    letter-spacing: 2.5px;
+}
+
+.tickets__item-data span {
+    display: inline-block;
+    transition: all .2s ease-in-out;
+}
+
+.tickets__item-data:hover span:nth-child(1) {
+    transform: translateY(-2px);
+}
+
+.tickets__item-data:hover span:nth-child(3n+2) {
+    transform: translateY(2px);
+}
+
+.tickets__item-data:hover span:nth-child(3n) {
+    transform: translateY(-1px);
+}
+
+.tickets__item-data:hover span:nth-child(4n) {
+    transform: translateY(-3px);
+}
+
+.tickets__item-title {
+    display: block;
+    text-align: left;
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 1.8px;
+    color: #fff;
+    max-width: 500px;
+    font-weight: 700;
+}
+
+.tickets__item-title span {
+    display: inline-block;
+    transition: all .2s ease-in-out;
+}
+
+.tickets__item-title:hover span:nth-child(1) {
+    transform: translateY(-2px);
+}
+
+.tickets__item-title:hover span:nth-child(3n+2) {
+    transform: translateY(3px);
+}
+
+.tickets__item-title:hover span:nth-child(3n) {
+    transform: translateY(-1px);
+}
+
+.tickets__item-title:hover span:nth-child(4n) {
+    transform: translateY(-6px);
+}
+
+.tickets__item-title:hover span:nth-child(7) {
+    transform: translateY(-3px);
+}
+
+.tickets__item-title:hover span:nth-child(9) {
+    transform: translateY(-1px);
+}
+
+.tickets__item-title:hover span:nth-child(10) {
+    transform: translateY(2px);
+}
+
+.tickets__item-title:hover span:nth-child(11) {
+    transform: translateY(-3px);
+}
+
+.tickets__item-title:hover span:nth-child(14) {
+    transform: translateY(3px);
+}
+
+.tickets__item-title:hover span:nth-child(15) {
+    transform: translateY(-3px);
+}
+
+.tickets__right {
+    display: flex;
+    align-items: flex-start;
+}
+
+.tickets__link {
+    display: inline-block;
+}
+
+.tickets__link-vk {
+    margin-right: 13px;
+}
+
+.tickets__link-vk svg {
+    fill: #000;
+    transition: fill .2s ease-in-out;
+}
+
+.tickets__link-vk:hover svg {
+    fill: #fff;
+}
+
+/*footer*/
+.footer {
+    position: relative;
+}
+.footer__container {
+    position: relative;
+    text-align: center;
+    padding-bottom: 37vw;
+}
+
+.footer__link {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer__link svg {
+    fill: #fff;
+    transition: fill .2s ease-in-out;
+}
+
+.footer__link:hover svg {
+    fill: #000;
+}
+
+.footer__ball {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    pointer-events: none;
+    transition: all 1.8s ease-in-out;
+}
+
+.footer__background-back {
+    top: 500px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: unset;
+    background-image: url('../img/balls-back.png');
+    pointer-events: none;
+}
+
+.footer__background-back.active {
+    top: -100px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.footer__ball-first {
+    display: block;
+    left: 50.5%;
+    right: 1.6%;
+    bottom: 0;
+    top: 40vw;
+    background-image: url('../img/ball-eighth.png');
+}
+
+.footer__ball-first.active {
+    top: 19vw;
+}
+
+.footer__ball-second {
+    background-image: url('../img/ball-sixth.png');
+    top: 19.5vw;
+    left: 19.5%;
+    right: 37%;
+    bottom: 0;
+}
+
+.footer__ball-second.active {
+    left: 20.7%;
+    right: 32.2%;
+    top: 0vw;
+}
+
+.footer__ball-third {
+    background-image: url('../img/ball-third.png');
+    top: 29.7vw;
+    left: -18%;
+    right: 60.5%;
+    bottom: 0;
+}
+
+.footer__ball-third.active {
+    top: 12vw;
+}
+
+.footer__ball-fourth {
+    background-image: url('../img/ball-seventh.png');
+    left: 73%;
+    right: -24%;
+    bottom: 0;
+    top: 30vw;
+}
+
+.footer__ball-fourth.active {
+    top: 22.8vw;
+}
+
+.footer__ball-fifth {
+    background-image: url('../img/ball-fourth.png');
+    top: 6vw;
+    left: 61%;
+    right: -18%;
+    bottom: 0;
+}
+
+.footer__ball-fifth.active {
+    left: 66%;
+    right: -26%;
+    top: -14vw;
+}
+
+.footer__ball-sixth {
+    background-image: url('../img/ball-seventh.png');
+    top: -3.8vw;
+    bottom: 0;
+    left: -19%;
+    right: 67.1%;
+}
+
+.footer__ball-sixth.active {
+    left: -21%;
+    right: 65%;
+    top: -25vw;
+}
+
+@media (max-width: 1024px) {
+    .tickets__list {
+        padding: 0;
+    }  
+}
+ 
+
+@media (max-width: 768px) {
+    .container {
+        padding-top: 33px;
+        padding-left: 21px;
+        padding-right: 16px;
+    }
+
+    .header__container {
+        padding-left: 34px;
+        padding-right: 30px;
+    }
+
+    .header__logo {
+        margin-bottom: 13px;
+        margin-left: 0;
+    }
+
+    .header__list {
+        margin-left: 0;
+    }
+
+    .hero__container {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 19px;
+        margin-top: 0;
+    }
+
+    .hero__img {
+        margin-left: 0;
+    }
+
+    .hero__img img {
+        margin-left: 8px;
+        transform: scale(1.13);
+    }
+
+    .ball__first {
+        top: -69vw;
+        left: 25%;
+        right: 35%;
+    }
+
+    .ball__first.active {
+        top: -200vw;
+        left: 30%;
+        right: 25%;
+    }
+
+    .ball__second {
+        left: 36.5%;
+        right: 34.5%;
+        top: 1.3vw;
+        transform: rotate(9deg);
+    }
+
+    .ball__second.active {
+        top: -220vw;
+    }
+
+    .ball__third {
+        left: -6%;
+        right: 62%;
+        top: -45vw;
+    }
+
+    .ball__third.active {
+        top: -120vw;
+        left: -17%;
+        right: 83%;
+        transform: rotate(-14deg);
+    }
+
+    .ball__fourth {
+        left: 37vw;
+        right: 27vw;
+        top: -70vw;
+        transform: rotate(13deg);
+    }
+
+    .ball__fourth.active {
+        left: 44%;
+        right: 17%;
+        top: -137vw;
+        transform: rotate(13deg);
+    }
+
+    .ball__fifth {
+        transform: rotate(10deg);
+        top: 5vw;
+        left: 47%;
+        right: 19%;
+    }
+
+    .ball__fifth.active {
+        top: -250vw;
+    }
+
+    .ball__sixth {
+        left: 75%;
+        right: -10%;
+        top: 13vw;
+    }
+
+    .ball__sixth.active {
+        left: 93%;
+        right: -26%;
+        top: -37vw;
+        transform: rotate(0);
+    }
+
+    .ball__seventh {
+        top: -53vw;
+        left: 66%;
+        right: 1%;
+    }
+
+    .ball__seventh.active {
+        right: -20%;
+        top: -119vw;
+    }
+
+    .ball__eighth {
+        top: 18vw;
+        left: 15%;
+        right: 51%;
+    }
+
+    .ball__eighth.active {
+        top: -130vw;
+        left: 14%;
+        right: 48%;
+    }
+
+    .ball__ninth {
+        background-image: url('../img/ball-eighth.png');
+        display: block;
+        left: -1%;
+        right: 72%;
+        top: 32vw;
+        bottom: -25%;
+        transform: rotate(-24deg);
+    }
+
+    .ball__ninth.active {
+        top: -65vw;
+        left: -12%;
+        right: 83%;
+    }
+
+    .tickets {
+        padding-top: 0;
+        padding-bottom: 80px;
+    }
+
+    .tickets__container {
+        padding-top: 25px;
+    }
+
+    .tickets__title {
+        display: none;
+    }
+
+    .tickets__arrow {
+        display: none;
+    }
+
+    .tickets__list {
+        margin-bottom: 0px;
+    }
+
+    .tickets__item {
+        margin-left: 0;
+    }
+
+    .tickets__item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .tickets__item-data {
+        max-width: 17vw;
+        margin-right: 1vw;
+        font-size: 5vw;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .tickets__item-title {
+        font-size: 5vw;
+        font-weight: 600;
+        letter-spacing: 0;
+        margin-left: 0;
+    }
+
+        
+    .tickets__item-title:hover span:nth-child(1) {
+        transform: translateY(-1px);
+    }
+
+    .tickets__item-title:hover span:nth-child(3n+2) {
+        transform: translateY(2px);
+    }
+
+    .tickets__item-title:hover span:nth-child(3n) {
+        transform: translateY(-1px);
+    }
+
+    .tickets__item-title:hover span:nth-child(4n) {
+        transform: translateY(-3px);
+    }
+
+    .tickets__item-title:hover span:nth-child(7) {
+        transform: translateY(1px);
+    }
+
+    .tickets__item-title:hover span:nth-child(9) {
+        transform: translateY(0px);
+    }
+
+    .tickets__item-title:hover span:nth-child(10) {
+        transform: translateY(2px);
+    }
+
+    .tickets__item-title:hover span:nth-child(11) {
+        transform: translateY(-1px);
+    }
+
+    .tickets__item-title:hover span:nth-child(14) {
+        transform: translateY(3px);
+    }
+
+    .tickets__item-title:hover span:nth-child(15) {
+        transform: translateY(-3px);
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .tickets__link-vk {
+        width: 47px;
+        height: 28px;
+    }
+
+    .footer {
+        overflow: hidden;
+    }
+
+    .tickets__link-ticket {
+        width: 54px;
+        height: 28px;
+    }
+
+    .footer__container {
+        padding-top: 25px;
+        padding-bottom: 41vw;
+    }
+
+    .footer__link {
+        width: 33px;
+        height: 25px;
+        margin-right: 6px;
+    }
+
+    .footer__background-back {
+        display: none;
+    }
+
+    .footer__ball {
+        display: none;
+        height: 100%;
+    }
+
+    .footer__ball-first {
+        display: block;
+        top: 32vw;
+        left: 81%;
+        right: -18%;
+        transform: rotate(4deg);
+    }
+
+    .footer__ball-first.active {
+        top: -4vw;
+        left: 61%;
+        right: 2%;
+        transform: rotate(-12deg);
+    }
+
+    .footer__ball-second {
+        display: block;
+        top: 37vw;
+        left: 36%;
+        right: 28%;
+        bottom: -20vw;
+        transform: rotate(10deg);
+    }
+
+    .footer__ball-second.active {
+        top: 18vw;
+        left: 34%;
+        right: 30%;
+    }
+
+    .footer__ball-third {
+        display: block;
+        background-image: url('../img/ball-eighth.png');
+        left: 12%;
+        right: 52%;
+        top: 30vw;
+        transform: rotate(5deg);
+    }
+
+    .footer__ball-third.active {
+        top: -7vw;
+        left: 7%;
+        right: 50%;
+    }
+
+    .footer__ball-fourth {
+        display: block;
+        left: 50%;
+        right: 16%;
+        top: 38.5vw;
+        transform: rotate(19deg);
+    }
+
+    .footer__ball-fourth.active {
+        right: 0%;
+        top: 22vw;
+        transform: rotate(21deg);
+    }
+
+    .footer__ball-fifth {
+        display: block;
+        background-image: url('../img/ball-eighth.png');
+        left: -22%;
+        right: 86%;
+        top: 18vw;
+    }
+
+    .footer__ball-fifth.active {
+        right: 80%;
+        left: -13%;
+        top: 6.5vw;
+        transform: rotate(5deg);
+    }
+
+    .footer__ball-sixth {
+        display: block;
+        background-image: url('../img/ball-eighth.png');
+        top: 36.5vw;
+        left: -11%;
+        right: 76%;
+        transform: rotate(-10deg);
+    }
+
+    .footer__ball-sixth.active {
+        top: 24vw;
+        left: 1%;
+        right: 57%;
+    }
+
+    .footer__ball-seventh {
+        display: block;
+        background-image: url('../img/ball-sixth.png');
+        left: 97%;
+        right: -35%;
+        top: 6vw;
+        bottom: 0;
+    }
+
+    .footer__ball-seventh.active {
+        left: 85%;
+        right: -18%;
+        top: 4.5vw;
+        transform: rotate(5deg);
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .header__list {
+        justify-content: space-between;
+    }
+    
+    .header__item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .tickets__item-title {
+        text-align: left;
+    }
+
+    .tickets__link-vk {
+        width: 32px;
+        height: 20px;
+        margin-right: 6px;
+    }
+
+    .tickets__link-ticket {
+        width: 35px;
+        height: 25px;
+    }
+}
+
+@media (max-width:414px) {
+
+    .tickets__item-title {
+        letter-spacing: -.2px;
+    }
+
+    .tickets__link-vk {
+        width: 27px;
+        height: 14px;
+        margin-right: 6px;
+    }
+
+    .tickets__link-ticket {
+        width: 30px;
+        height: 16px;
+    }
+}
+
